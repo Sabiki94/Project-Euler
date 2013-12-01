@@ -5,30 +5,30 @@
 
 int nextpnum(int num)
 {
-	int count;
+    int count;
 
-	if(num % 2) num += 2;
-	else num++;
-	for(count = 3;count * count <= num;count+=2){
-		if(num % count == 0){
-			if(num % 2) num += 2;
-			else num++;
-			count = 1;
-		}
-	}
-	if(num == 1) num++;
+    if (num % 2) num += 2;
+    else num++;
+    for (count = 3; count * count <= num; count += 2){
+        if (num % count == 0){
+            if (num % 2) num += 2;
+            else num++;
+            count = 1;
+        }
+    }
+    if (num == 1) num++;
 
-	return num;
+    return num;
 }
 
 int main(void)
 {
-	int pnum = 0, count = 1, pcount = 1;
+    int pnum = 0, count = 1, pcount = 1;
 
-	for(pcount = 1; pcount <= 10001; pcount++)
-		pnum = nextpnum(pnum);
+    for (pcount = 1; pcount <= 10001; pcount++)
+        pnum = nextpnum(pnum);
 
-	printf("10001th Prime number : %d\n", pnum);
+    printf("10001th Prime number : %d\n", pnum);
 
-	return 0;
+    return 0;
 }

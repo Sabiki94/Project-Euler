@@ -14,25 +14,27 @@
 
 int main(void)
 {
-	int sum = 0, fib_l = 1, fib_r = 2;
+    int sum = 0, fib_l = 1, fib_r = 2;
 
-	/*
-	while(1) {
-	if(fib_l % 2 == 0)
-	sum += fib_l;
-	fib_r += fib_l;
-	fib_l = fib_r - fib_l;
-	if(fib_l > 4000000) break;
-	} */
-	while(4000000 > fib_l) {
-		if(fib_l % 2 == 0)
-			sum += fib_l;
-		fib_r += fib_l;
-		fib_l = fib_r - fib_l;
-	}
+#if 0
+    while(1) {
+        if(fib_l % 2 == 0)
+            sum += fib_l;
+        fib_r += fib_l;
+        fib_l = fib_r - fib_l;
+        if(fib_l > 4000000)
+            break;
+    }
+#endif
+    while (4000000 > fib_l) {
+        if (fib_l % 2 == 0)
+            sum += fib_l;
+        fib_r += fib_l;
+        fib_l = fib_r - fib_l;
+    }
 
-	puts("*** The sum of the even-valued the Fbonacci sequence whose values do not exceed four million ***");
-	printf("Result:%d\n", sum);
+    puts("*** The sum of the even-valued the Fbonacci sequence whose values do not exceed four million ***");
+    printf("Result:%d\n", sum);
 
-	return 0;
+    return 0;
 }
