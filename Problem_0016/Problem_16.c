@@ -4,12 +4,12 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <Windows.h>
+#include <stdint.h>
 
-UINT64 mypow(int base, int exponent)
+uint64_t mypow(int base, int exponent)
 {
     int i;
-    UINT64 temp;
+    uint64_t temp;
 
     temp = 1;
     for (i = 0; i < exponent; i++)
