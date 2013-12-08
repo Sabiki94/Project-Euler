@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#define N 40
 #define M 20
 
 int combination(int n, int m)
@@ -17,12 +16,11 @@ int combination(int n, int m)
     int i;
     uint64_t nur, deno;
 
-    nur = 1;
-    for (i = n; i >= n-m+1; i--) {
+    nur = deno = 1;
+    for (i = n; i >= n - m + 1; i--) {
         nur *= i;
     }
 
-    deno = 1;
     for (i = 1; i <= m; i++) {
         deno *= i;
     }
