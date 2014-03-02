@@ -79,6 +79,11 @@
   <ItemGroup>
     <ClCompile Include="Problem_3.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common-function\common-function.vcxproj">
+      <Project>{c40b2d5a-5a15-41f5-81eb-53f5abf86442}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

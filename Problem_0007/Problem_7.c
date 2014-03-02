@@ -2,24 +2,7 @@
 /* 2012-07-11  */
 
 #include <stdio.h>
-
-int nextpnum(int num)
-{
-    int count;
-
-    if (num % 2) num += 2;
-    else num++;
-    for (count = 3; count * count <= num; count += 2){
-        if (num % count == 0){
-            if (num % 2) num += 2;
-            else num++;
-            count = 1;
-        }
-    }
-    if (num == 1) num++;
-
-    return num;
-}
+#include "../common-function/commfunc.h"
 
 int main(void)
 {

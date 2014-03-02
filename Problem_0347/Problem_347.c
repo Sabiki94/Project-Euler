@@ -4,11 +4,11 @@
 
 #include <stdio.h>
 #include <Windows.h>
+#include "../common-function/commfunc.h"
 
 INT64 M(INT64 p, INT64 q, int N);
 INT64 S(int N);
 INT64 mypow(INT64 base, INT64 exponent);
-int nextpnum(int num);
 
 int main(void)
 {
@@ -96,23 +96,4 @@ INT64 mypow(INT64 base, INT64 exponent)
         temp *= base;
 
     return temp;
-}
-
-int nextpnum(int num)
-{
-    int count;
-
-    // Šï”‚È‚çŸ‚Ì‘f”‚Í•K‚¸Šï”‚È‚Ì‚Å+2A‚»‚¤‚Å‚È‚¯‚ê‚Î++
-    if (num % 2) num += 2;
-    else num++;
-
-    for (count = 3; count * count <= num; count += 2){
-        if (num % count == 0){
-            num += 2;
-            count = 3 - 2;
-        }
-    }
-    if (num == 1) num++;	// 1‚Í‘f”‚Å‚Í‚È‚¢
-
-    return num;
 }

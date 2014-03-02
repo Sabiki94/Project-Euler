@@ -52,6 +52,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,6 +79,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Problem_347.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common-function\common-function.vcxproj">
+      <Project>{c40b2d5a-5a15-41f5-81eb-53f5abf86442}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
